@@ -2,7 +2,6 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
 
-
 Window {
     id: window
     visible: true
@@ -143,19 +142,6 @@ Window {
             NumberAnimation{ properties: "x"; from: 100; duration: 500}
         }
     }
-
-    Rectangle{
-        color: "blue"
-        border.width: 8
-        border.color: "#000000"
-        height: 150
-        anchors.bottom: parent.bottom
-        anchors.top: listView.bottom
-        anchors.right: parent.right
-        anchors.left: parent.left
-
-    }
-
 
 }
 

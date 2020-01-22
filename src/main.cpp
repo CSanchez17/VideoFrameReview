@@ -26,9 +26,13 @@ int main(int argc, char *argv[])
     context->setContextProperty("modelManager",
                                 &myimageProvider.m_modelManager);
 
-
     context->setContextProperty("myModel",
         QVariant::fromValue(myimageProvider.m_modelManager.m_frameModel));
+
+    CvClass cvclass;
+    context->setContextProperty("cvclass",
+        QVariant::fromValue(&cvclass));
+
 
     engine.addImageProvider(QLatin1String("MyImageProvider"), &myimageProvider);
 
